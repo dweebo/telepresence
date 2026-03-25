@@ -51,6 +51,7 @@ func (c *containerState) HandleIntercepts(ctx context.Context, iis []*manager.In
 					SftpPort:    int32(c.SftpPort()),
 					FtpPort:     int32(c.FtpPort()),
 					MountPoint:  c.MountPoint(),
+					Mounts:      c.Mounts().ToRPC(),
 					Environment: c.Env(),
 				})
 			}
